@@ -1,3 +1,15 @@
+const express = require("express");
+const app = express();
+
+app.listen(3000, () => {
+
+ console.log("Project is running!");
+})
+
+app.get("/", (req, res) => {
+ res.send("Hello");
+})
+
 const Discord = require('discord.js');
 const client = new Discord.Client({ disableMentions: 'everyone' });
 const ayarlar = require('./ayarlar.json');
@@ -79,9 +91,9 @@ client.on('ready', () => {
   // Oynuyor Kısmı
   
       var actvs = [
-        `Roblox`,
-        `Roblox`, 
-        `Roblox`
+        `No Beta Soon`,
+        `No Beta Soon`, 
+        `No Beta Soon`
     ];
     
     client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'PLAYING' });
@@ -122,14 +134,14 @@ if(message.guild){
   const data2 = cdb.get("cd2."+message.channel.id+message.guild.id)
  
   if(data1){
-  const blacklist = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "Amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "sik", "yarrak", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "amq", "gay", "g@y", "bollock", "cındır", "CINDIR", "Cındır", "bambılı", "piss", "0rospu", "or0spu", "0r0spu", "||amk||", "||orospu||", "||0rospu||", "awk", "zort", "siz botsunuz", "SİZ BOTSUNUZ", "SIZ BOTSUNUZ", "Siz botsunuz", "Siz Botsunuz", "ass", "ASS", "Ass", "@ss", "aSs", "Oğraş", "OĞRAŞ", "oğraş", "@mk", "o.ç", "O.Ç", "O.ç", ".gg", ".GG", ".Gg", ".gG", "gg/", "GG/", "Gg/", "gG/", ".gg/", ".GG/", ".Gg/", ".gG/", ".gg/j", ".gg/r", ".GG/j", ".GG/r", "gg", "GG", "Gg", "gG", "discord.gg", "discord.gg/", "discord.com/invite", "0ğraş", "z0rt", "Z0rt", "Z0RT", "nigger", "Nigger", "NIGGER", "NİGGER", "nigg", "Nigg", "NIGG", "NİGG", "n!gg", "N!gg", "N!GG", "ass", "ASS", "Ass", "dick", "d!ck", "shit", "sh!t", "sh1t", "d1ck", "cock", "c0ck", "s1k", "s!k", "💩", "bok", "b0k", "poop", "p00p", "po0p", "p0op", "🤬", "bitch", "b1tch", "b!tch", "btch", ":face_with_symbols_over_mouth:", "face_with_symbols_over_mouth:", "face_with_symbols_over_mouth"];
+  const blacklist = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "Amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "sik", "yarrak", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "amq", "gay", "g@y", "bollock", "cındır", "CINDIR", "Cındır", "bambılı", "piss", "0rospu", "or0spu", "0r0spu", "||amk||", "||orospu||", "||0rospu||", "awk", "zort", "siz botsunuz", "SİZ BOTSUNUZ", "SIZ BOTSUNUZ", "Siz botsunuz", "Siz Botsunuz", "ass", "ASS", "Ass", "@ss", "aSs", "Oğraş", "OĞRAŞ", "oğraş", "@mk", "o.ç", "O.Ç", "O.ç", "0ğraş", "z0rt", "Z0rt", "Z0RT", "nigger", "Nigger", "NIGGER", "NİGGER", "nigg", "Nigg", "NIGG", "NİGG", "n!gg", "N!gg", "N!GG", "ass", "ASS", "Ass", "dick", "d!ck", "shit", "sh!t", "sh1t", "d1ck", "cock", "c0ck", "s1k", "s!k", "💩", "bok", "b0k", "poop", "p00p", "po0p", "p0op", "🤬", "bitch", "b1tch", "b!tch", "btch", ":face_with_symbols_over_mouth:", "face_with_symbols_over_mouth:", "face_with_symbols_over_mouth", ":face_with_symbols_over_mouth:*", "face_with_symbols_over_mouth:*", "face_with_symbols_over_mouth*", "MTAwMjIwMDI4MDYzNDQ5OTA4Mg.GiR2vx.Of_F3JcAZUCU3dDM_IfYH4AI6_YBAJ9-KLLDAI"];
 
   let content = message.content.split(' ');
  
   content.forEach(kelime => {
   if(blacklist.some(küfür => küfür === kelime))  {
   if(!message.member.permissions.has('BAN_MEMBERS')){
-  message.delete({timeout: 10});
+  message.delete({timeout: 100});
   message.reply("**⛔ Swear is not allowed!**")
   }
   }
@@ -137,14 +149,14 @@ if(message.guild){
   }
 
     if(!data1 && data2){
-  const blacklist = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "Amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "sik", "yarrak", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "amq", "gay", "g@y", "bollock", "cındır", "CINDIR", "Cındır", "bambılı", "piss", "0rospu", "or0spu", "0r0spu", "||amk||", "||orospu||", "||0rospu||", "awk", "zort", "siz botsunuz", "SİZ BOTSUNUZ", "SIZ BOTSUNUZ", "Siz botsunuz", "Siz Botsunuz", "ass", "ASS", "Ass", "@ss", "aSs", "Oğraş", "OĞRAŞ", "oğraş", "@mk", "o.ç", "O.Ç", "O.ç", ".gg", ".GG", ".Gg", ".gG", "gg/", "GG/", "Gg/", "gG/", ".gg/", ".GG/", ".Gg/", ".gG/", ".gg/j", ".gg/r", ".GG/j", ".GG/r", "gg", "GG", "Gg", "gG", "discord.gg", "discord.gg/", "discord.com/invite", "0ğraş", "z0rt", "Z0rt", "Z0RT", "nigger", "Nigger", "NIGGER", "NİGGER", "nigg", "Nigg", "NIGG", "NİGG", "n!gg", "N!gg", "N!GG", "ass", "ASS", "Ass", "dick", "d!ck", "shit", "sh!t", "sh1t", "d1ck", "cock", "c0ck", "s1k", "s!k", "💩", "bok", "b0k", "poop", "p00p", "po0p", "p0op", "🤬", "bitch", "b1tch", "b!tch", "btch", ":face_with_symbols_over_mouth:", "face_with_symbols_over_mouth:", "face_with_symbols_over_mouth"];
+  const blacklist = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "Amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "sik", "yarrak", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "amq", "gay", "g@y", "bollock", "cındır", "CINDIR", "Cındır", "bambılı", "piss", "0rospu", "or0spu", "0r0spu", "||amk||", "||orospu||", "||0rospu||", "awk", "zort", "siz botsunuz", "SİZ BOTSUNUZ", "SIZ BOTSUNUZ", "Siz botsunuz", "Siz Botsunuz", "ass", "ASS", "Ass", "@ss", "aSs", "Oğraş", "OĞRAŞ", "oğraş", "@mk", "o.ç", "O.Ç", "O.ç", "0ğraş", "z0rt", "Z0rt", "Z0RT", "nigger", "Nigger", "NIGGER", "NİGGER", "nigg", "Nigg", "NIGG", "NİGG", "n!gg", "N!gg", "N!GG", "ass", "ASS", "Ass", "dick", "d!ck", "shit", "sh!t", "sh1t", "d1ck", "cock", "c0ck", "s1k", "s!k", "💩", "bok", "b0k", "poop", "p00p", "po0p", "p0op", "🤬", "bitch", "b1tch", "b!tch", "btch", ":face_with_symbols_over_mouth:", "face_with_symbols_over_mouth:", "face_with_symbols_over_mouth", ":face_with_symbols_over_mouth:*", "face_with_symbols_over_mouth:*", "face_with_symbols_over_mouth*", "MTAwMjIwMDI4MDYzNDQ5OTA4Mg.GiR2vx.Of_F3JcAZUCU3dDM_IfYH4AI6_YBAJ9-KLLDAI"];
 
   let content = message.content.split(' ');
  
   content.forEach(kelime => {
   if(blacklist.some(küfür => küfür === kelime))  {
   if(!message.member.permissions.has('BAN_MEMBERS')){
-  message.delete({timeout: 10});
+  message.delete({timeout: 100});
   message.reply("**⛔ Swear is not allowed!**")
   }
   }
