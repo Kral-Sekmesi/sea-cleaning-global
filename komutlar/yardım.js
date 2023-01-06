@@ -6,13 +6,13 @@ exports.run = async (client, message, args) => {
 
 //GENEL KOMUTU
     if(args[0] === "general" || args[0] === "General" || args[0] === "general") {
-              let Genel = new Discord.MessageEmbed()
-  .setAuthor('Genel', message.author.displayAvatarURL())
+              let General = new Discord.MessageEmbed()
+  .setAuthor('General', message.author.displayAvatarURL())
   .setColor('#2667FF')
   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Genel').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Links", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)`  , false)
-              return message.channel.send(Genel)
+              return message.channel.send(General)
          
        
        return;
@@ -20,12 +20,12 @@ exports.run = async (client, message, args) => {
     //SUNUCU KOMUTU
       if(args[0] === "Server" || args[0] === "server") {
               let Sunucu = new Discord.MessageEmbed()
-  .setAuthor('Sunucu', message.author.displayAvatarURL())
+  .setAuthor('Server', message.author.displayAvatarURL())
   .setColor('#2667FF')
   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sunucu').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Links", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)`  , false)
-              return message.channel.send(Sunucu)
+              return message.channel.send(Server)
          
       
 
@@ -34,7 +34,7 @@ exports.run = async (client, message, args) => {
 //EĞLENCE KOMUTU
   if(args[0] === "Eğlence" || args[0] === "eğlence" || args[0] === "Fun" || args[0] === "fun") {
    let Eğlence = new Discord.MessageEmbed()
-  .setAuthor('Eğlence', message.author.displayAvatarURL())
+  .setAuthor('Fun', message.author.displayAvatarURL())
   .setColor('#2667FF')
   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Eğlence').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
@@ -47,7 +47,7 @@ exports.run = async (client, message, args) => {
   //MODERASYON KOMUTU
   if(args[0] === "moderation" || args[0] === "Moderation") {
    let Moderasyon = new Discord.MessageEmbed()
-  .setAuthor('Moderasyon', message.author.displayAvatarURL())
+  .setAuthor('Moderation', message.author.displayAvatarURL())
   .setColor('#2667FF')
   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Moderasyon').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
@@ -60,7 +60,7 @@ exports.run = async (client, message, args) => {
      //SAHİP KOMUTU
   if(args[0] === "Sahip" || args[0] === "sahip" ) {
     let Sahip = new Discord.MessageEmbed()
-   .setAuthor('Moderasyon', message.author.displayAvatarURL())
+   .setAuthor('Moderation', message.author.displayAvatarURL())
    .setColor('#2667FF')
    .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sahip').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
