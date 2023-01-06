@@ -91,9 +91,9 @@ client.on('ready', () => {
   // Oynuyor Kısmı
   
       var actvs = [
-        `No Beta Soon`,
-        `No Beta Soon`, 
-        `No Beta Soon`
+        `!help`,
+        `!help`, 
+        `!help`
     ];
     
     client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'PLAYING' });
