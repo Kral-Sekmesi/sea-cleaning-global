@@ -30,7 +30,7 @@ var prefix = ayarlar.prefix;
 exports.conf = {
   aliases: ['yasakla', 'ban', 'ban-user'],
   permLevel: 0,
-  kategori: 'Moderation'
+  kategori: 'Moderasyon'
 };
 
 exports.help = {

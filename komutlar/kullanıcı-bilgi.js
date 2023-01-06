@@ -44,7 +44,7 @@ moment.locale('tr-TR');
 exports.conf = {
   aliases: ['profilim','kullanıcıbilgi','profil','kullanıcı bilgi','kb','bilgi', 'user-info', 'userinfo'],
   permLevel: 0,
-  kategori: 'General'
+  kategori: 'Genel'
 };
 
 exports.help = {

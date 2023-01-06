@@ -40,7 +40,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   aliases: ['block-swear', 'küfür-engel', 'block-bad-words', 'küfür-engelleme', 'swear-words', 'küfür-kelimeleri', 'bad-words', 'küfür-kelimeler'],
   permLevel: 0,
-  kategori: 'Moderation'  
+  kategori: 'Moderasyon'  
 };
 
 exports.help = {

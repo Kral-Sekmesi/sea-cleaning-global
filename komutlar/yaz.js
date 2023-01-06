@@ -10,7 +10,7 @@ if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazma
 exports.conf = {
   aliases: ['say', 'söyle', "write"],
   permLevel: 0,
-  kategori: 'General'
+  kategori: 'Genel'
 };
 
 exports.help = {

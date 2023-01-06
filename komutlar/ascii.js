@@ -23,7 +23,7 @@ module.exports.run = (client, message, args, tools) => {
 exports.conf = {
   aliases: [],
   permLevel: 0,
-  kategori: 'Eğlence'
+  kategori: 'Eğlenc'
 };
 exports.help = {
   name: 'ascii',

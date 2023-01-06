@@ -29,7 +29,7 @@ message.channel.send(`<@${user.id}> **User have been kicked!** **Reason: \`${rea
 exports.conf = {
   aliases: ['at', 'kick', 'kick-user'],
   permLevel: 0,
-  kategori: "Moderation",
+  kategori: "Moderasyon",
 };
 
 exports.help = {
