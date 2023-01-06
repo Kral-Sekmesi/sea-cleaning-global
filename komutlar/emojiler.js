@@ -33,11 +33,11 @@ exports.run = async(client, msg, args) => {
 exports.conf = {
  aliases: ['emoji-liste'],
  permLevel: 0,
- kategori: 'Sunucu'
+ kategori: 'Server'
 };
 
 exports.help = {
  name: 'emojiler',
  description: 'Sunucudaki tüm emojileri gösterir.',
- usage: 'emojiler'
+ usage: 'emojis'
 };

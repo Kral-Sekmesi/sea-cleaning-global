@@ -42,14 +42,14 @@ moment.locale('tr-TR');
         }
 
 exports.conf = {
-  aliases: ['profilim','kullanıcıbilgi','profil','kullanıcı bilgi','kb','bilgi'],
+  aliases: ['profilim','kullanıcıbilgi','profil','kullanıcı bilgi','kb','bilgi', 'user-info', 'userinfo'],
   permLevel: 0,
-  kategori: 'Genel'
+  kategori: 'General'
 };
 
 exports.help = {
   name: 'kullanıcı-bilgi',
-  description: 'Kullanıcı hakkında bilgi verir.',
-  usage: 'kullanıcı-bilgi @Kullanıcı',
+  description: 'Learn more user info',
+  usage: 'user-info @Kullanıcı',
 
 };

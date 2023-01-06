@@ -8,13 +8,13 @@ if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazma
 };
 
 exports.conf = {
-  aliases: ['say', 'söyle'],
+  aliases: ['say', 'söyle', "write"],
   permLevel: 0,
-  kategori: 'Genel'
+  kategori: 'General'
 };
 
 exports.help = {
   name: 'yaz',
-  description: 'İstediğiniz şeyi bota yazdırır.',
-  usage: 'yaz [yazdırmak istediğiniz şey]'
+  description: 'You can say if you want',
+  usage: 'say [yazdırmak istediğiniz şey]'
 };
