@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Eğlence').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Linkler", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + ` [Vote here](https://bit.ly/3nUkUBT)`  , false)
-   return message.channel.send(Eğlence)
+   return message.channel.send(Fun)
   
       
            return;
@@ -74,11 +74,11 @@ exports.run = async (client, message, args) => {
 //YARDIM KOMUTU
   
   let embed = new Discord.MessageEmbed()
-  .setAuthor('Yardım Komutları', message.author.displayAvatarURL())
+  .setAuthor('Help commands', message.author.displayAvatarURL())
   .setThumbnail(client.user.avatarURL())
   .setColor('#FFFB05')
-  .setDescription(`**Örnek Kullanım:** \`${prefix}help Kategori\` \n **Örnek:** \`${prefix}help Genel\``)
-  .addField('Kategoriler:', `
+  .setDescription(`**Example use:** \`${prefix}help General\``)
+  .addField('Category:', `
   **[${prefix}help General](https://discord.gg/XHr5RttRxv)** 
   **[${prefix}help Fun](https://discord.gg/XHr5RttRxv)**
   **[${prefix}help Moderation](https://discord.gg/XHr5RttRxv)**
