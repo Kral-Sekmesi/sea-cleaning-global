@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
               let Genel = new Discord.MessageEmbed()
   .setAuthor('Genel', message.author.displayAvatarURL())
   .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+  .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Genel').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Links", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)`  , false)
               return message.channel.send(Genel)
@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
               let Sunucu = new Discord.MessageEmbed()
   .setAuthor('Sunucu', message.author.displayAvatarURL())
   .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+  .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sunucu').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Links", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)`  , false)
               return message.channel.send(Sunucu)
@@ -36,7 +36,7 @@ exports.run = async (client, message, args) => {
    let Eğlence = new Discord.MessageEmbed()
   .setAuthor('Eğlence', message.author.displayAvatarURL())
   .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+  .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Eğlence').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Linkler", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + ` [Vote here](https://bit.ly/3nUkUBT)`  , false)
    return message.channel.send(Eğlence)
@@ -45,11 +45,11 @@ exports.run = async (client, message, args) => {
            return;
   }
   //MODERASYON KOMUTU
-  if(args[0] === "Moderasyon" || args[0] === "moderasyon" || args[0] === "moderation" || args[0] === "Moderation") {
+  if(args[0] === "moderation" || args[0] === "Moderation") {
    let Moderasyon = new Discord.MessageEmbed()
   .setAuthor('Moderasyon', message.author.displayAvatarURL())
   .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+  .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Moderasyon').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
         .addField("» Links", ` [Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + ` [Vote here](https://bit.ly/3nUkUBT)`  , false)
    return message.channel.send(Moderasyon)
@@ -62,7 +62,7 @@ exports.run = async (client, message, args) => {
     let Sahip = new Discord.MessageEmbed()
    .setAuthor('Moderasyon', message.author.displayAvatarURL())
    .setColor('#2667FF')
-   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+   .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sahip').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
          .addField("» Links", `[Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)` , false)
     return message.channel.send(Sahip)
@@ -86,7 +86,7 @@ exports.run = async (client, message, args) => {
   `)
   .addField("» Links", `[Invite](https://discord.com/oauth2/authorize?client_id=993184917682921532&permissions=2147483656&scope=bot%20applications.commands)` + "** | **" + `[Support Server](https://discord.gg/XHr5RttRxv)`  + "** | **" + `[Vote here](https://bit.ly/3nUkUBT)`    , false)
 
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+  .setFooter('Used command by ' + message.author.tag, message.author.displayAvatarURL())
   message.channel.send(embed)
 
   
@@ -97,12 +97,12 @@ exports.run = async (client, message, args) => {
   exports.conf = {
     aliases: ['help', 'cmds', 'komutlar','y'], //Komutun farklı yazılışlarla kullanımları
     permLevel: 0, //Komutun kimler kullanacağını belirtir (bot.js dosyasından en aşağı inerseniz gerekli yeri görürsünüz)
-    kategori: "Genel" //Yardım komutunda hangi kategoride gözükeceğini ayarlarsınız
+    kategori: "General" //Yardım komutunda hangi kategoride gözükeceğini ayarlarsınız
 
   };
 
   exports.help = {
     name: 'help',  //adını belirtin (kullanmak için gereken komut) Örneğin Otorol
-    description: 'Komutlar hakkında bilgi verir.', //Komutun açıklaması
+    description: 'Learn more commands!', //Komutun açıklaması
     usage: 'help', //Komutun kullanım şekli (örneğin !otorol <@rol> <#kanal>)
   };
