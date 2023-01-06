@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     var prefix = ayarlar.prefix;
 
 //GENEL KOMUTU
-    if(args[0] === "Genel" || args[0] === "genel" || args[0] === "General" || args[0] === "general") {
+    if(args[0] === "general" || args[0] === "General" || args[0] === "general") {
               let Genel = new Discord.MessageEmbed()
   .setAuthor('Genel', message.author.displayAvatarURL())
   .setColor('#2667FF')
