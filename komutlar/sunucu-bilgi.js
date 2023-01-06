@@ -15,22 +15,22 @@ function checkDays(date) {
         let verifLevels = ["Yok", "Düşük hesapta e-posta doğrulanmış olmalıdır", "Orta - Discord'a 5 dakikadan daha uzun süre kayıtlı olmalıdır", "Yüksek - (╯ ° □ °） ╯︵ ┻━┻ - sunucunun üyesi 10 dakikadan uzun olmalıdır", "Çok Yüksek - ┻━┻ ミ ヽ (ಠ 益 ಠ) ﾉ 彡 ┻━┻ - doğrulanmış bir telefon numarasına sahip olmalıdır"];
 	let region = {
 			"us-central": "Amerika :flag_us:",
-			"us-east": "Doğu Amerika :flag_us:",
-			"us-south": "Güney Amerika :flag_us:",
-			"us-west": "Batı Amerika :flag_us:",
-			"eu-west": "Batı Avrupa :flag_eu:",
-			"eu-central": "Avrupa :flag_eu:",
-			"singapore": "Singapur :flag_sg:",
-			"london": "Londra :flag_gb:",
-			"japan": "Japonya :flag_jp:",
-			"russia": "Rusya :flag_ru:",
+			"us-east": "US East :flag_us:",
+			"us-south": "US South :flag_us:",
+			"us-west": "US West :flag_us:",
+			"eu-west": "EU West :flag_eu:",
+			"eu-central": "Europe :flag_eu:",
+			"singapore": "Singapore :flag_sg:",
+			"london": "London :flag_gb:",
+			"japan": "Japan :flag_jp:",
+			"russia": "Russia :flag_ru:",
 			"hongkong": "Hong Kong :flag_hk:",
-			"brazil": "Brezilya :flag_br:",
-			"singapore": "Singapur :flag_sg:",
-			"sydney": "Sidney :flag_au:",
-			"southafrica": "Güney Afrika :flag_za:",
-    "amsterdam": "Hollanda :flag_nl:",
-				"europe": "Avrupa :flag_eu:"
+			"brazil": "Brazil :flag_br:",
+			"singapore": "Singapore :flag_sg:",
+			"sydney": "Sydney :flag_au:",
+			"southafrica": "South Africa :flag_za:",
+    "amsterdam": "Amsterdam :flag_nl:",
+				"europe": "Europe :flag_eu:"
 
 	}
 
