@@ -37,7 +37,7 @@ exports.conf = {
 };
 
 exports.help = {
- name: 'emojiler',
- description: 'Sunucudaki tüm emojileri gösterir.',
+ name: 'emojis',
+ description: 'Show emojis!',
  usage: 'emojis'
 };

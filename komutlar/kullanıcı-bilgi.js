@@ -48,7 +48,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'kullanıcı-bilgi',
+  name: 'user-info',
   description: 'Learn more user info',
   usage: 'user-info @Kullanıcı',
 

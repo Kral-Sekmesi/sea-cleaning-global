@@ -14,7 +14,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yaz',
+  name: 'say',
   description: 'You can say if you want',
   usage: 'say [yazdırmak istediğiniz şey]'
 };

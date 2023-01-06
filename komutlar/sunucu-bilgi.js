@@ -52,13 +52,13 @@ let sunucu = new Discord.MessageEmbed()
 }; 
 
 module.exports.conf = {
-aliases: ['sunucubilgi','sb','sunucu'],
+aliases: ['sunucubilgi','sb','sunucu', 'si', 'serverinfo', 'server'],
 permLevel: 0, 
 kategori: 'Sunucu'
 };
 
 module.exports.help = {
-    name: 'sunucu-bilgi',
-    description: 'Sunucu hakkında bilgi verir.',
-    usage: 'sunucu-bilgi'
+    name: 'server-info',
+    description: 'Learn more server info!',
+    usage: 'server-info'
 };

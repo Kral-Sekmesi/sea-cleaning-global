@@ -97,7 +97,7 @@ exports.run = async (client, message, args) => {
   exports.conf = {
     aliases: ['help', 'cmds', 'komutlar','y'], //Komutun farklı yazılışlarla kullanımları
     permLevel: 0, //Komutun kimler kullanacağını belirtir (bot.js dosyasından en aşağı inerseniz gerekli yeri görürsünüz)
-    kategori: "General" //Yardım komutunda hangi kategoride gözükeceğini ayarlarsınız
+    kategori: "Genel" //Yardım komutunda hangi kategoride gözükeceğini ayarlarsınız
 
   };
 
