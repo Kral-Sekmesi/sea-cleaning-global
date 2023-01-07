@@ -23,7 +23,7 @@ moment.locale('tr-TR');
             let now = new Date();
             let diff = now.getTime() - date.getTime();
             let days = Math.floor(diff / 86400000);
-            return days + (days == 1 ? " gün" : " gün") + " önce";
+            return days + (days == 1 ? " day" : " day") + " ago";
         };
 
   if (!member) return message.reply('Bir kullanıcı belirt g!profil @Gnarge veya g!profil <Kullanıcı_ID> ')
@@ -34,8 +34,8 @@ moment.locale('tr-TR');
       .setAuthor(user.tag, user.avatarURL() || user.defaultavatarURL())
       .setThumbnail(user.avatarURL() || user.defaultavatarURL())
       .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
-      .addField('Üye bilgisi:',`**Kullanıcı İsmi:** ${member.displayName}\n**Katılım Tarihi:** ${moment.utc(member.joinedAt).format('Do MMMM YYYY')} - ${checkDays(member.joinedAt)} \n**Rolleri:** ${member.roles.cache.sort((b, a) => { return a.position - b.position }).map(role => `${role}`).join(" | ")}`, false)        .addField('Kullanıcı bilgisi:',  `\n**Tag**: ${member.user.tag}\n**ID:** ${member.user.id}\n**Kuruluş Tarihi**: ${moment.utc(user.createdAt).format('Do MMMM YYYY')} - ${checkDays(user.createdAt)}`, false)
-      .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.avatarURL())
+      .addField('Member Info:',`**Username:** ${member.displayName}\n**Joined history:** ${moment.utc(member.joinedAt).format('Do MMMM YYYY')} - ${checkDays(member.joinedAt)} \n**Roles:** ${member.roles.cache.sort((b, a) => { return a.position - b.position }).map(role => `${role}`).join(" | ")}`, false)        .addField('User Info:',  `\n**Tag**: ${member.user.tag}\n**ID:** ${member.user.id}\n**Created history**: ${moment.utc(user.createdAt).format('Do MMMM YYYY')} - ${checkDays(user.createdAt)}`, false)
+      .setFooter('Used command by ' + message.author.tag, message.author.avatarURL())
       .setTimestamp()
      return message.channel.send(embed)
                                 

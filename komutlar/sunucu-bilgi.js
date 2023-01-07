@@ -6,15 +6,15 @@ function checkDays(date) {
             let now = new Date();
             let diff = now.getTime() - date.getTime();
             let days = Math.floor(diff / 86400000);
-            return days + (days == 1 ? " gün" : " gün") + " önce";
+            return days + (days == 1 ? " day" : " day") + " ago";
         };
         let guild = msg.channel.guild
         let serverSize = msg.guild.memberCount;
         let botCount = msg.guild.members.cache.filter(m => m.user.bot).size;
         let humanCount = serverSize - botCount;
-        let verifLevels = ["Yok", "Düşük hesapta e-posta doğrulanmış olmalıdır", "Orta - Discord'a 5 dakikadan daha uzun süre kayıtlı olmalıdır", "Yüksek - (╯ ° □ °） ╯︵ ┻━┻ - sunucunun üyesi 10 dakikadan uzun olmalıdır", "Çok Yüksek - ┻━┻ ミ ヽ (ಠ 益 ಠ) ﾉ 彡 ┻━┻ - doğrulanmış bir telefon numarasına sahip olmalıdır"];
+        let verifLevels = ["None", "Must have verified e-mail on their discord account", "Medium - Must also be registed on discord longer than 5 minutes", "High - (╯ ° □ °） ╯︵ ┻━┻ - Must also be registed on discord longer than 10 minutes", "Highest - ┻━┻ ミ ヽ (ಠ 益 ಠ) ﾉ 彡 ┻━┻ - Must have verified e-mail on their discord account"];
 	let region = {
-			"us-central": "Amerika :flag_us:",
+			"us-central": "American :flag_us:",
 			"us-east": "US East :flag_us:",
 			"us-south": "US South :flag_us:",
 			"us-west": "US West :flag_us:",
@@ -35,18 +35,18 @@ function checkDays(date) {
 	}
 
 	
-			const yukleniyor = await msg.channel.send(`Sunucu Bilgileri Araştırılıyor`);
+			const yukleniyor = await msg.channel.send(`Loading server information!`);
 
 let sunucu = new Discord.MessageEmbed()
-.setAuthor('Sunucu Bilgi', msg.guild.iconURL())
+.setAuthor('Server info', msg.guild.iconURL())
 .setThumbnail(msg.guild.iconURL())
-.addField('Sunucu Bilgileri', `Sunucu İsmi: **${guild.name}** \nSunucu ID: **${msg.guild.id}** \nSunucu Sahibi: **${guild.owner}** \nBulunduğu Bölge: **${region[msg.guild.region]}** \nKuruluş Tarihi: **${checkDays(msg.guild.createdAt)}** 
+.addField('Server Information', `Server Name: **${guild.name}** \nServer ID: **${msg.guild.id}** \nServer Owner: **${guild.owner}** \nLocation: **${region[msg.guild.region]}** \nCreated history: **${checkDays(msg.guild.createdAt)}** 
 `)
-.addField(`Üye Bilgileri `, `Toplam Üye: **${humanCount}** \nToplam Bot: **${botCount}** \nRol Sayısı: **${guild.roles.cache.size}**`)
-.addField(`Kanallar`, ` Yazı: **${msg.guild.channels.cache.filter(c => c.type === 'text').size}** \n Sesli: **${msg.guild.channels.cache.filter(c => c.type === 'voice').size}** \n Kategori: **${msg.guild.channels.cache.filter(c => c.type === 'category').size}**`)
+.addField(`Member Information `, `Total Members: **${humanCount}** \nTotal Bots: **${botCount}** \nRol Sayısı: **${guild.roles.cache.size}**`)
+.addField(`Channel`, ` Text: **${msg.guild.channels.cache.filter(c => c.type === 'text').size}** \n Voice: **${msg.guild.channels.cache.filter(c => c.type === 'voice').size}** \n Category: **${msg.guild.channels.cache.filter(c => c.type === 'category').size}**`)
 .setTimestamp()
 .setColor('#D2EE07')
-.setFooter('Sunucu Bilgi', msg.guild.iconURL())
+.setFooter('Server Information', msg.guild.iconURL())
         return yukleniyor.edit('', sunucu);
 
 }; 
