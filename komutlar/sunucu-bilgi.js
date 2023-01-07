@@ -12,7 +12,7 @@ function checkDays(date) {
         let serverSize = msg.guild.memberCount;
         let botCount = msg.guild.members.cache.filter(m => m.user.bot).size;
         let humanCount = serverSize - botCount;
-        let verifLevels = ["None", "Must have verified e-mail on their discord account", "Medium - Must also be registed on discord longer than 5 minutes", "High - (╯ ° □ °） ╯︵ ┻━┻ - Must also be registed on discord longer than 10 minutes", "Highest - ┻━┻ ミ ヽ (ಠ 益 ಠ) ﾉ 彡 ┻━┻ - Must have verified e-mail on their discord account"];
+        let verifyLevels = ["None", "Must have verified e-mail on their discord account", "Medium - Must also be registed on discord longer than 5 minutes", "High - (╯ ° □ °） ╯︵ ┻━┻ - Must also be registed on discord longer than 10 minutes", "Highest - ┻━┻ ミ ヽ (ಠ 益 ಠ) ﾉ 彡 ┻━┻ - Must have verified e-mail on their discord account"];
 	let region = {
 			"us-central": "American :flag_us:",
 			"us-east": "US East :flag_us:",
@@ -42,7 +42,7 @@ let sunucu = new Discord.MessageEmbed()
 .setThumbnail(msg.guild.iconURL())
 .addField('Server Information', `Server Name: **${guild.name}** \nServer ID: **${msg.guild.id}** \nServer Owner: **${guild.owner}** \nLocation: **${region[msg.guild.region]}** \nCreated history: **${checkDays(msg.guild.createdAt)}** 
 `)
-.addField(`Member Information `, `Total Members: **${humanCount}** \nTotal Bots: **${botCount}** \nRol Sayısı: **${guild.roles.cache.size}**`)
+.addField(`Member Information `, `Total Members: **${humanCount}** \nTotal Bots: **${botCount}** \nRole Count: **${guild.roles.cache.size}**`)
 .addField(`Channel`, ` Text: **${msg.guild.channels.cache.filter(c => c.type === 'text').size}** \n Voice: **${msg.guild.channels.cache.filter(c => c.type === 'voice').size}** \n Category: **${msg.guild.channels.cache.filter(c => c.type === 'category').size}**`)
 .setTimestamp()
 .setColor('#D2EE07')
